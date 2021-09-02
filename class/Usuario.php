@@ -51,6 +51,19 @@ class Usuario
       $this->setDtcadastro(new DateTime($row['dtcadastro']));
     }
   }
+  public static function getList()
+  {
+    $sql = new Sql();
+    return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
+  }
+
+  public static function search($login)
+  {
+    $sql = new Sql();
+    return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin;", array(
+      ':SEARCH' => "%" . $login . "%"
+    ));
+  }
   public function __toString()
   {
     return json_encode(array(
