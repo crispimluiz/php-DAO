@@ -10,6 +10,8 @@ $root->loadbyId(2);
 //carrea lista de usuários buscando pelo ligin.
 //$search = Usuario::search("CRIS");
 //echo json_encode($search);
-$usuario = new Usuario();
-$usuario->login("CRISPIM", "123456");
-echo $usuario;;
+//Chama um usuário
+//$usuario = new Usuario();
+//$usuario->login("CRISPIM", "123456");
+$lista = Usuario::getList();
+echo json_encode($lista);
