@@ -13,5 +13,22 @@ $root->loadbyId(2);
 //Chama um usuário
 //$usuario = new Usuario();
 //$usuario->login("CRISPIM", "123456");
-$lista = Usuario::getList();
-echo json_encode($lista);
+//$lista = Usuario::getList();
+//echo json_encode($lista);
+//$aluno = new Usuario();
+//$aluno->setDeslogin("João");
+//$aluno->setDessenha("@admin");
+
+//$aluno->insert();
+//echo $aluno;
+
+//alterar usuário
+/*
+$usuario = new Usuario();
+$usuario->loadById(4);
+$usuario->update("professor", "1234443");
+echo $usuario;*/
+$usuario = new Usuario();
+$usuario->loadById(4);
+$usuario->delete();
+echo $usuario;
